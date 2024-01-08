@@ -346,80 +346,225 @@
     margin-top: 0px;
     text-align: center;
     padding: 60px; /* Add padding for better spacing */
+    }
+
+    .collection-heading {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: white; /* Text color for the collection heading */
+        font-weight: bold; /* Bold font */
+    }
+
+    .collection-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .shoe {
+        width: 350px; /* Adjusted width for better alignment */
+        margin: 20px;
+        position: relative; /* Position relative for button positioning */
+        text-align: center; /* Center text within the shoe */
+    }
+
+    .shoe img {
+        width: 100%;
+        height: 350px; /* Increase the image height */
+        border-radius: 10px;
+        margin-bottom: 10px;
+        transition: filter 0.3s; /* Add transition for smooth effect on hover */
+    }
+
+    .shoe img:hover {
+        filter: grayscale(0%); /* Show original color on hover */
+    }
+
+    .shoe-info {
+        text-align: center; /* Center text within the shoe */
+    }
+
+    .shoe-name {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        color: white; /* Text color for the shoe name */
+    }
+
+    .shoe-price {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        color: #FFD700; /* Yellow color for the price */
+    }
+
+    .shoe-description {
+        font-size: 1em;
+        color: white; /* Text color for the description */
+    }
+
+    .get-yours-button {
+        margin-top: 15px;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 50px; /* Oval shape */
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s; /* Add transition effect for color change */
+    }
+
+    .get-yours-button:hover {
+        background-color: #FFD700; /* Yellow color on hover */
+        color: black;
+    }
+
+    .faq-section {
+      background: black;
+      padding: 60px;
+      text-align: center;
+      width:100%;
+    }
+
+    .faq-heading {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #FFD700; /* Text color for the FAQ heading */
+    }
+
+    .faq-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width:100%;
+    }
+
+    .faq-item {
+      width: 70%; /* Adjusted width for better readability */
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #848484; /* Text color for the question */
+    }
+
+    .answer {
+      font-size: 1em;
+      color: whitesmoke; /* Text color for the answer */
+    }
+
+    .contact-section {
+      padding: 60px;
+      text-align: center;
+      width:100%;
+      background:#a30000 ;
+    }
+
+    .contact-heading {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: black; /* Text color for the contact heading */
+      font-weight: bold; /* Bold font */
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      width: 70%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      color: black; /* Text color for labels */
+      font-size: 1.0em; /* Larger font size */
+      font-weight: bold; /* Bold font */
+      letter-spacing: 1px; /* Adjust letter spacing for style */
+      text-transform: uppercase; /* Convert text to uppercase */
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .send-message-button {
+      background-color: #FFD700; /* Yellow background */
+      color: black;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px; /* Oval shape */
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s; /* Add transition effect for color change */
+    }
+
+    .send-message-button:hover {
+      background-color: yellow; /* Yellow color on hover */
+      color: black;
+    }
+
+    .footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width:100%;
 }
 
-.collection-heading {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: white; /* Text color for the collection heading */
-    font-weight: bold; /* Bold font */
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 15px;
 }
 
-.collection-images {
+.footer-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.shoe {
-    width: 350px; /* Adjusted width for better alignment */
-    margin: 20px;
-    position: relative; /* Position relative for button positioning */
-    text-align: center; /* Center text within the shoe */
+.footer-section {
+    text-align: left;
 }
 
-.shoe img {
-    width: 100%;
-    height: 350px; /* Increase the image height */
-    border-radius: 10px;
+.footer-section h3 {
+    font-size: 16px;
     margin-bottom: 10px;
-    transition: filter 0.3s; /* Add transition for smooth effect on hover */
 }
 
-.shoe img:hover {
-    filter: grayscale(0%); /* Show original color on hover */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.shoe-info {
-    text-align: center; /* Center text within the shoe */
-}
-
-.shoe-name {
-    font-size: 1.5em;
+.footer-section ul li {
     margin-bottom: 5px;
-    color: white; /* Text color for the shoe name */
 }
 
-.shoe-price {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    color: #FFD700; /* Yellow color for the price */
-}
-
-.shoe-description {
-    font-size: 1em;
-    color: white; /* Text color for the description */
-}
-
-.get-yours-button {
-    margin-top: 15px;
-    background-color: transparent;
+.footer-section a {
     color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 50px; /* Oval shape */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Add transition effect for color change */
+    text-decoration: none;
 }
 
-.get-yours-button:hover {
-    background-color: #FFD700; /* Yellow color on hover */
-    color: black;
+.footer-section a:hover {
+    color: #FFD700;
 }
 
-
-
+  
   </style>
   <title>Revel Shoes SSP</title>
 </head>
@@ -435,7 +580,9 @@
       <a href="#shop">Shop</a>
     </div>
     <div class="register-button">
-      <button>Register Now</button>
+      <button>
+        <a href="{{ route('register') }}">Register Now</a>
+     </button>
     </div>
   </nav>
 
@@ -447,7 +594,7 @@
             <div class="get-started-button">
             @if (Route::has('register'))
             <button>
-                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Get Started</a>
+                <a href="{{ route('login') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Get Started</a>
             </button>
             @endif
             </div>
@@ -618,6 +765,82 @@
     </div>
   </div>
 </div>
+
+<div class="faq-section">
+  <div class="faq-heading">
+    Frequently Asked Questions
+  </div>
+  <div class="faq-content">
+    <div class="faq-item">
+      <div class="question">Q: How can I customize my shoes?</div>
+      <div class="answer">A: Visit our Customize page and follow the easy steps to design your unique pair.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Q: What is the return policy?</div>
+      <div class="answer">A: We offer a 30-day return policy. Check our Returns & Exchanges page for details.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Q: How long does customization take?</div>
+      <div class="answer">A: Customization time varies based on design complexity, but we strive to deliver within 4-6 weeks.</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Q: Do you ship internationally?</div>
+      <div class="answer">A: Yes, we ship our custom creations worldwide to bring Shoemojo magic to every corner of the globe.</div>
+    </div>
+    <!-- Add more FAQ items as needed -->
+  </div>
+</div>
+
+<div class="contact-section">
+  <div class="contact-heading">
+    Get in Touch
+  </div>
+  <div class="contact-content">
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="send-message-button">Send Message</button>
+    </form>
+  </div>
+</div>
+<div class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@yourcompany.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Main Tabs</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Featured Collections</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
