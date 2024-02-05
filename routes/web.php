@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('/events', function () {
+    return view('events');
+})->name('events');
+
+Route::get('/eventregistration', function () {
+    return view('eventregistration');
+})->name('eventregistration');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -26,3 +34,25 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/shop', function () {
+    return view('shop');
+})->name('shop');
+
+Route::get('/', function () {
+    return view('homepage');
+})->name('homepage');
+
+Route::resource(
+    'user',
+    \App\Http\Controllers\UserController::class
+);
+
+Route::resource(
+    'product-category',
+    \App\Http\Controllers\ProductCategoryController::class
+);
+
+
+
+

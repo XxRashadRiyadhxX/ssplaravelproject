@@ -399,18 +399,19 @@
     .shoe-description {
         font-size: 1em;
         color: white; /* Text color for the description */
+        margin-bottom: 20px;
     }
 
     .get-yours-button {
-        margin-top: 15px;
-        background-color: transparent;
-        color: white;
-        font-weight: bold;
-        padding: 10px 20px;
-        border: 2px solid white;
-        border-radius: 50px; /* Oval shape */
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s; /* Add transition effect for color change */
+      margin-top: 20px;
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 50px; /* Oval shape */
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s; /* Add transition effect for color change */
     }
 
     .get-yours-button:hover {
@@ -459,7 +460,7 @@
       padding: 60px;
       text-align: center;
       width:100%;
-      background:#a30000 ;
+      background: linear-gradient(90deg, rgba(0,0,0,1) 4%, rgba(113,0,0,1) 35%, rgba(160,0,0,1) 50%, rgba(113,0,0,1) 65%, rgba(0,0,0,1) 96%);
     }
 
     .contact-heading {
@@ -576,13 +577,11 @@
     </div>
     <div class="tabs">
       <a href="#customize">Customize</a>
-      <a href="#events">Events</a>
-      <a href="#shop">Shop</a>
+      <a href="{{ route('events') }}">Events</a>
+      <a href="{{ route('shop') }}">Shop</a>
     </div>
     <div class="register-button">
-      <button>
         <a href="{{ route('register') }}">Register Now</a>
-     </button>
     </div>
   </nav>
 
@@ -626,7 +625,10 @@
       <h3>Sneaker Release Party</h3>
       <p>March 5, 2024</p>
       <p>Celebrate the launch of our latest sneaker collections with an event filled with music, food, and fun.</p>
-      <button class="join-button">Join</button>
+      <a href="{{ route('eventregistration') }}">
+        <button class="join-button">Join</button>
+      </a>
+
     </div>
   </div>
 
@@ -636,7 +638,9 @@
       <h3>Shoe Design Workshop</h3>
       <p>January 15, 2024</p>
       <p>Join us for an interactive workshop and learn the art of shoe customization.</p>
-      <button class="join-button">Join</button>
+      <a href="{{ route('eventregistration') }}">
+        <button class="join-button">Join</button>
+      </a>
     </div>
   </div>
 
@@ -646,7 +650,9 @@
       <h3>Fashion Show Extravaganza</h3>
       <p>February 10, 2024</p>
       <p>Witness the magic of custom shoes on the runway. Be prepared to be amazed!</p>
-      <button class="join-button">Join</button>
+      <a href="{{ route('eventregistration') }}">
+        <button class="join-button">Join</button>
+      </a>
     </div>
   </div>
 
@@ -656,7 +662,9 @@
       <h3>Sneaker Exchange Social</h3>
       <p>April 20, 2024</p>
       <p>Connect with fellow shoe enthusiasts and swap your unique creations.</p>
-      <button class="join-button">Join</button>
+      <a href="{{ route('eventregistration') }}">
+        <button class="join-button">Join</button>
+      </a>
     </div>
   </div>
 </div>
@@ -704,7 +712,7 @@
         <div class="shoe-name">Old and Gold</div>
         <div class="shoe-price">$150</div>
         <div class="shoe-description">Timeless and effortlessly stylish, blending classic aesthetics with contemporary allure.</div>
-        <button class="get-yours-button">Get Yours</button>
+        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
       </div>
     </div>
 
@@ -716,7 +724,7 @@
         <div class="shoe-name">Sport Mode</div>
         <div class="shoe-price">$120</div>
         <div class="shoe-description">Tailored to be the perfect choice for sports enthusiasts and active lifestyles.</div>
-        <button class="get-yours-button">Get Yours</button>
+        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
       </div>
     </div>
 
@@ -727,7 +735,7 @@
         <div class="shoe-name">Broken Amethyst</div>
         <div class="shoe-price">$199</div>
         <div class="shoe-description">Embark on a transformative journey with a captivating design for an entirely fresh look.</div>
-        <button class="get-yours-button">Get Yours</button>
+        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
       </div>
     </div>
 
@@ -738,7 +746,7 @@
         <div class="shoe-name">A73 Comfys</div>
         <div class="shoe-price">$230</div>
         <div class="shoe-description">Experience unparalleled comfort as you immerse yourself in the plush embrace of these shoes.</div>
-        <button class="get-yours-button">Get Yours</button>
+        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
       </div>
     </div>
 
@@ -749,7 +757,7 @@
         <div class="shoe-name">Converse Ruby Red</div>
         <div class="shoe-price">$249</div>
         <div class="shoe-description">Unleash your confidence with a pair that exudes a daring and stylish demeanor.</div>
-        <button class="get-yours-button">Get Yours</button>
+        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
       </div>
     </div>
 
@@ -757,10 +765,10 @@
     <div class="shoe">
       <img src="https://schiffgold.com/wp-content/uploads/2018/09/gold-nike2.png" alt="Collection 6">
       <div class="shoe-info">
-        <div class="shoe-name">Gold Killers</div>
+        <div class="shoe-name">Pirate Treasure</div>
         <div class="shoe-price">$300</div>
         <div class="shoe-description">Elevate your everyday style with a nonchalant display of casual sophistication and flair.</div>
-        <button class="get-yours-button">Get Yours</button>
+        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
       </div>
     </div>
   </div>
@@ -817,7 +825,7 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>Contact Us</h3>
-        <p>Email: info@yourcompany.com</p>
+        <p>Email: info@revelshoes.com</p>
         <p>Phone: +1 (555) 123-4567</p>
       </div>
       <div class="footer-section">
