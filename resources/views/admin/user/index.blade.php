@@ -1,15 +1,15 @@
 <x-app-layout>
 
     <div class="container mx-auto mt-1">
-        <div class="px-4 sm:px-6 lg:px-8 bg-white pt-4">
+        <div class="px-4 sm:px-6 lg:px-8 bg-black pt-4">
 
             @if (session('success'))
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 mb-5"
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4 mb-5"
                     role="alert">
                     <strong class="font-bold">Success!</strong>
                     <span class="block sm:inline">{{ session('success') }}</span>
                     <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                        <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20">
                             <title>Close</title>
                             <path
@@ -22,13 +22,13 @@
 
             <div class="sm:flex sm:items-center">
                 <div class="sm:flex-auto">
-                    <h1 class="text-base font-semibold leading-6 text-gray-900">Users</h1>
-                    <p class="mt-2 text-sm text-gray-700">A list of all the users in your account including their name,
+                    <h1 class="text-base font-semibold leading-6 text-red-900">Users</h1>
+                    <p class="mt-2 text-sm text-red-700">A list of all the users in your account including their name,
                         title, email and role.</p>
                 </div>
                 <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
                     <a href="{{ route('user.create') }}"
-                        class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        class="block rounded-md bg-red-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
                         Create User
                     </a>
                 </div>
@@ -38,58 +38,53 @@
             <div class="mt-8 flow-root">
                 <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-                        <table class="min-w-full divide-y divide-gray-300">
+                        <table class="min-w-full divide-y divide-red-300">
                             <thead>
                                 <tr>
                                     <th scope="col"
-                                        class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
+                                        class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-red-900 sm:pl-0">
                                         ID
                                     </th>
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                        class="px-3 py-3.5 text-left text-sm font-semibold text-red-900">
                                         Name</th>
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                        class="px-3 py-3.5 text-left text-sm font-semibold text-red-900">
                                         Email</th>
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                        class="px-3 py-3.5 text-left text-sm font-semibold text-red-900">
                                         Role</th>
                                     <th scope="col"
-                                        class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                        class="px-3 py-3.5 text-left text-sm font-semibold text-red-900">
                                         Actions</th>
-                                    <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
-                                        <span class="sr-only">Edit</span>
-                                    </th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-200">
+                            <tbody class="divide-y divide-red-200">
                                 @foreach ($users as $user)
                                     <tr>
                                         <td
-                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-red-900 sm:pl-0">
                                             {{ $user->id }}</td>
                                         <td
-                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-red-900 sm:pl-0">
                                             {{ $user->name }}</td>
                                         <td
-                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-red-900 sm:pl-0">
                                             {{ $user->email }}</td>
                                         <td
-                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-red-900 sm:pl-0">
                                             {{ ucwords(str_replace('_', ' ', Str::snake($user->role->name))) }}</td>
                                         <td
-                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-red-900 sm:pl-0">
                                             <div class="flex gap-3">
-                                                <a href="{{ route('user.show', $user->id) }}"
-                                                    class="rounded bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Show</a>
                                                 <a href="{{ route('user.edit', $user->id) }}"
-                                                    class="rounded bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Edit</a>
+                                                    class="rounded bg-red-900 px-2 py-1 text-xs font-semibold text-white shadow-sm ring-1 ring-inset ring-red-300 hover:bg-red-800">Edit</a>
                                                 <form
                                                     action="{{ route('user.destroy', $user->id) }}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="rounded bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Delete</button>
+                                                    <button type="submit" class="rounded bg-red-900 px-2 py-1 text-xs font-semibold text-white shadow-sm ring-1 ring-inset ring-red-300 hover:bg-red-800">Delete</button>
                                                 </form>
                                             </div>
                                         </td>

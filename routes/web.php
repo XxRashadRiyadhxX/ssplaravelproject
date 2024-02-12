@@ -48,10 +48,7 @@ Route::resource(
     \App\Http\Controllers\UserController::class
 );
 
-Route::resource(
-    'product-category',
-    \App\Http\Controllers\ProductCategoryController::class
-);
+
 
 
 

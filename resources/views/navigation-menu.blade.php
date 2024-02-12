@@ -121,11 +121,11 @@
 
 
                                 <div class="block px-4 py-2 text-xs text-gray-400">
-                                    {{ __('Manage Products') }}
+                                    {{ __('Manage Shoe Products') }}
                                 </div>
 
-                                <x-dropdown-link href="{{  route('product-category.index') }}">
-                                    {{ __('Product Categories') }}
+                                <x-dropdown-link href="">
+                                    {{ __('Shoe Categories') }}
                                 </x-dropdown-link>
 
                                 <div class="border-t border-gray-200"></div>
