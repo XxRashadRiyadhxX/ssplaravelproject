@@ -124,7 +124,7 @@
                                     {{ __('Manage Shoe Products') }}
                                 </div>
 
-                                <x-dropdown-link href="">
+                                <x-dropdown-link href="{{ route('product.index') }}">
                                     {{ __('Shoe Categories') }}
                                 </x-dropdown-link>
 
