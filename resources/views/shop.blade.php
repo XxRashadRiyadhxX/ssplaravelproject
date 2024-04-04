@@ -21,9 +21,9 @@
                 margin: 0;
                 padding: 0;
                 min-height: 100vh; /* Change to min-height */
-                background: rgb(0,0,0);
                 overflow-x: hidden; /* Prevent horizontal scrolling */
-                background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+                background: rgb(187,187,187);
+                background: linear-gradient(77deg, rgba(187,187,187,1) 47%, rgba(139,139,139,1) 100%);
                 align-items: center;
             }
 
@@ -437,6 +437,33 @@
             .footer-section a:hover {
                 color: #FFD700;
             }
+
+            .event-title-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .event-title {
+                text-align: center;
+                color: #fff; 
+                font-size: 48px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                filter: brightness(100%);
+                font-family: 'cursive';
+                margin-top: 200px;
+                transition: color 0.3s;
+                padding: 20px 20px 20px; /* Adjust top padding to move it down */
+                background-color: #000; /* Black background color */
+                width: 400px; /* Adjust width as needed */
+                opacity: 2.0; /* Adjust opacity to make it darker */
+            }
+
+            .event-title:hover {
+                color: #ff0000; /* Lighter version of red */
+            }
+
      </style>
    </head>
    <title>Revel Shoes SSP</title>
@@ -456,17 +483,24 @@
         </div>
     </nav>
 
+    <section style="background-image: url(https://static.dezeen.com/uploads/2014/06/Sneakerboy-by-March-Studio_dezeen_468_7.jpg); background-size: cover; background-position: center 75%; height: 400px; filter: brightness(80%); opacity: 0.7; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 150px;">
+    <div class="event-title-container">
+        <h1 class="event-title">The Shoe Store</h1>
+    </div>
+    </section>
+
     <div class="product-cards-1">
         <div class="product-card">
             <div class="logo-cart">
                 <!--<img src="images/logo.jpg" alt="logo">-->
                 <i class='bx bx-shopping-bag'></i>
             </div>
-            <div class="main-images">
+            <div class="main-images" style="margin-top: -180px;">
                 <img id="black" class="black active" src="images/black.png" alt="black">
                 <img id="brown" class="brown" src="images/brown.png" alt="brown">
                 <img id="blue" class="blue" src="images/blue.png" alt="blue">
             </div>
+            <img src="https://img.freepik.com/free-photo/pair-brown-shoes-with-black-leather-sole-word-bottom_123827-23446.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703289600&semt=ais" alt="Collection 1" class="shoe-image" style="width: 300px;"> <!-- New image tag added -->
             <div class="shoe-details">
                 <span class="shoe_name">Old and Gold</span>
                 <p>Timeless and effortlessly stylish, blending classic aesthetics with contemporary allure.</p>
@@ -503,11 +537,13 @@
         <!--<img src="images/logo.jpg" alt="logo">-->
         <i class='bx bx-shopping-bag'></i>
         </div>
-        <div class="main-images">
+        <div class="main-images" style="margin-top: -180px;">
             <img id="blue" class="blue active" src="images/blue.png" alt="blue">
             <img id="pink" class="pink" src="images/pink.png" alt="blue">
             <img id="yellow" class="yellow" src="images/yellow.png" alt="blue">
         </div>
+        <img src="https://rukminim2.flixcart.com/image/450/500/l3dcl8w0/shoe/d/s/m/8-ga1118-8-adidas-cblack-stone-actgol-original-imagegegzhhgzhk3.jpeg?q=90&crop=false" alt="Collection 2" class="shoe-image" style="width: 300px; height: 200px;">
+
         <div class="shoe-details">
         <span class="shoe_name">Sport Mode</span>
         <p>Tailored to be the perfect choice for sports enthusiasts and active lifestyles.</p>
@@ -544,10 +580,11 @@
             <!--<img src="images/logo.jpg" alt="logo">-->
             <i class='bx bx-shopping-bag'></i>
         </div>
-        <div class="main-images">
+        <div class="main-images" style="margin-top: -180px;">
             <img id="purple" class="purple active" src="images/purple.png" alt="purple">
             <img id="yellow" class="yellow" src="images/yellow.png" alt="yellow">
         </div>
+        <img src="https://i.pinimg.com/236x/06/e2/e7/06e2e7ed9e287b9cde2908255a48ef68.jpg" alt="Collection 3" class="shoe-image" style="width: 300px; height: 200px;">
         <div class="shoe-details">
             <span class="shoe_name">Broken Amethyst</span>
             <p>Embark on a transformative journey with a captivating design for an entirely fresh look.</p>
@@ -586,11 +623,12 @@
                 <!--<img src="images/logo.jpg" alt="logo">-->
                 <i class='bx bx-shopping-bag'></i>
             </div>
-            <div class="main-images">
+            <div class="main-images" style="margin-top: -180px;">
                 <img id="off-white" class="off-white active" src="images/off-white.png" alt="off-white">
                 <img id="purple" class="purple" src="images/purple.png" alt="purple">
                 <img id="black" class="black" src="images/black.png" alt="black">
             </div>
+            <img src="https://images.squarespace-cdn.com/content/v1/53a2b3a1e4b0a5020bebe676/1475654193100-3P0KPI6P5T2AZCGARTSN/shoe-footwear-product-photography-london-adidas-ultra-boost-21.jpg?format=2500w" alt="Collection 4" class="shoe-image" style="width: 300px;">
             <div class="shoe-details">
                 <span class="shoe_name">A73 Comfys</span>
                 <p>Experience unparalleled comfort as you immerse yourself in the plush embrace of these shoes.</p>
@@ -627,9 +665,10 @@
                 <!--<img src="images/logo.jpg" alt="logo">-->
                 <i class='bx bx-shopping-bag'></i>
             </div>
-            <div class="main-images">
+            <div class="main-images" style="margin-top: -180px;">
                 <img id="red" class="red active" src="images/red.png" alt="red">
             </div>
+            <img src="https://images.journeys.com/images/products/1_5160_FS_ALT1C.JPG" alt="Collection 5" class="shoe-image" style="width: 300px; height: 200px;">
             <div class="shoe-details">
                 <span class="shoe_name">Converse Ruby Red</span>
                 <p>Unleash your confidence with a pair that exudes a daring and stylish demeanor.</p>
@@ -664,9 +703,10 @@
                 <!--<img src="images/logo.jpg" alt="logo">-->
                 <i class='bx bx-shopping-bag'></i>
             </div>
-            <div class="main-images">
+            <div class="main-images" style="margin-top: -180px;">
                 <img id="gold" class="gold active" src="images/gold.png" alt="gold">
             </div>
+            <img src="https://schiffgold.com/wp-content/uploads/2018/09/gold-nike2.png" alt="Collection 6" class="shoe-image" style="width: 300px;">
             <div class="shoe-details">
                 <span class="shoe_name">Pirate Treasure</span>
                 <p>Elevate your everyday style with a nonchalant display of casual sophistication and flair.</p>

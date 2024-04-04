@@ -625,8 +625,8 @@
       <h3>Sneaker Release Party</h3>
       <p>March 5, 2024</p>
       <p>Celebrate the launch of our latest sneaker collections with an event filled with music, food, and fun.</p>
-      <a href="{{ route('eventregistration') }}">
-        <button class="join-button">Join</button>
+      <a href="{{ route('events') }}">
+        <button class="join-button">View More Details</button>
       </a>
 
     </div>
@@ -638,8 +638,8 @@
       <h3>Shoe Design Workshop</h3>
       <p>January 15, 2024</p>
       <p>Join us for an interactive workshop and learn the art of shoe customization.</p>
-      <a href="{{ route('eventregistration') }}">
-        <button class="join-button">Join</button>
+      <a href="{{ route('events') }}">
+        <button class="join-button">View More Details</button>
       </a>
     </div>
   </div>
@@ -650,8 +650,8 @@
       <h3>Fashion Show Extravaganza</h3>
       <p>February 10, 2024</p>
       <p>Witness the magic of custom shoes on the runway. Be prepared to be amazed!</p>
-      <a href="{{ route('eventregistration') }}">
-        <button class="join-button">Join</button>
+      <a href="{{ route('events') }}">
+        <button class="join-button">View More Details</button>
       </a>
     </div>
   </div>
@@ -662,8 +662,8 @@
       <h3>Sneaker Exchange Social</h3>
       <p>April 20, 2024</p>
       <p>Connect with fellow shoe enthusiasts and swap your unique creations.</p>
-      <a href="{{ route('eventregistration') }}">
-        <button class="join-button">Join</button>
+      <a href="{{ route('events') }}">
+        <button class="join-button">View More Details</button>
       </a>
     </div>
   </div>
