@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <style>
     /* Google Fonts Poppins */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
@@ -323,7 +324,7 @@
     <h1>Name of the Event 1</h1>
     <p class="event-time">Event Date: April 15, 2024 | Time: 8:00 PM</p>
     <div class="buttons">
-      <a href="https://www.example.com/get-tickets" class="btn">Get Tickets</a>
+      <a href="{{ route('event1.tickets') }}" class="btn">Get Tickets</a> <!-- Updated route link -->
       <a href="https://youtu.be/ZqR_8uqDZ-E" class="btn">Watch Video</a>
     </div>
   </div>
@@ -340,7 +341,7 @@
     <h1>Name of the Event 2</h1>
     <p class="event-time">Event Date: April 20, 2024 | Time: 7:00 PM</p>
     <div class="buttons">
-      <a href="https://www.example.com/get-tickets" class="btn">Get Tickets</a>
+      <a href="{{ route('event2.tickets') }}" class="btn">Get Tickets</a> <!-- Updated route link -->
       <a href="https://youtu.be/sjrcO6FWzdE" class="btn">Watch Video</a>
     </div>
   </div>
@@ -357,7 +358,7 @@
     <h1>Name of the Event 3</h1>
     <p class="event-time">Event Date: April 25, 2024 | Time: 6:00 PM</p>
     <div class="buttons">
-      <a href="https://www.example.com/get-tickets" class="btn">Get Tickets</a>
+      <a href="{{ route('event3.tickets') }}" class="btn">Get Tickets</a> <!-- Updated route link -->
       <a href="https://youtu.be/Dd_kE1146Ug" class="btn">Watch Video</a>
     </div>
   </div>
@@ -366,6 +367,7 @@
     <p id="demo3"></p>
   </div>
 </div>
+
 
 <script>
   // Set the date we're counting down to for Event 1
@@ -376,8 +378,12 @@
     // Get the current date and time
     var now = new Date().getTime();
 
-    // Calculate the time remaining between now and the countdown date for Event 1
-    var distance = countDownDate1 - now;
+    // Add one month to the countdown date for Event 1
+    var countDownDate1PlusOneMonth = new Date(countDownDate1);
+    countDownDate1PlusOneMonth.setMonth(countDownDate1PlusOneMonth.getMonth() + 1);
+
+    // Calculate the time remaining between now and the updated countdown date for Event 1
+    var distance = countDownDate1PlusOneMonth - now;
 
     // Calculate days, hours, minutes, and seconds for Event 1
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -397,60 +403,69 @@
   }, 1000);
 
   // Set the date we're counting down to for Event 2
-  var countDownDate2 = new Date("April 20, 2024 19:00:00").getTime();
+var countDownDate2 = new Date("April 20, 2024 19:00:00").getTime();
 
-  // Update the countdown for Event 2 every 1 second
-  var x2 = setInterval(function() {
-    // Get the current date and time
-    var now = new Date().getTime();
+// Update the countdown for Event 2 every 1 second
+var x2 = setInterval(function() {
+  // Get the current date and time
+  var now = new Date().getTime();
 
-    // Calculate the time remaining between now and the countdown date for Event 2
-    var distance = countDownDate2 - now;
+  // Add one month to the countdown date for Event 2
+  var countDownDate2PlusOneMonth = new Date(countDownDate2);
+  countDownDate2PlusOneMonth.setMonth(countDownDate2PlusOneMonth.getMonth() + 1);
 
-    // Calculate days, hours, minutes, and seconds for Event 2
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Calculate the time remaining between now and the updated countdown date for Event 2
+  var distance = countDownDate2PlusOneMonth - now;
 
-    // Display the result in the element with id="demo2"
-    document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+  // Calculate days, hours, minutes, and seconds for Event 2
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // If the countdown is over, display a message for Event 2
-    if (distance < 0) {
-      clearInterval(x2);
-      document.getElementById("demo2").innerHTML = "EXPIRED";
-    }
-  }, 1000);
+  // Display the result in the element with id="demo2"
+  document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+  // If the countdown is over, display a message for Event 2
+  if (distance < 0) {
+    clearInterval(x2);
+    document.getElementById("demo2").innerHTML = "EXPIRED";
+  }
+}, 1000);
 
   // Set the date we're counting down to for Event 3
-  var countDownDate3 = new Date("April 25, 2024 18:00:00").getTime();
+var countDownDate3 = new Date("April 25, 2024 18:00:00").getTime();
 
-  // Update the countdown for Event 3 every 1 second
-  var x3 = setInterval(function() {
-    // Get the current date and time
-    var now = new Date().getTime();
+// Update the countdown for Event 3 every 1 second
+var x3 = setInterval(function() {
+  // Get the current date and time
+  var now = new Date().getTime();
 
-    // Calculate the time remaining between now and the countdown date for Event 3
-    var distance = countDownDate3 - now;
+  // Add one month to the countdown date for Event 3
+  var countDownDate3PlusOneMonth = new Date(countDownDate3);
+  countDownDate3PlusOneMonth.setMonth(countDownDate3PlusOneMonth.getMonth() + 1);
 
-    // Calculate days, hours, minutes, and seconds for Event 3
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Calculate the time remaining between now and the updated countdown date for Event 3
+  var distance = countDownDate3PlusOneMonth - now;
 
-    // Display the result in the element with id="demo3"
-    document.getElementById("demo3").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+  // Calculate days, hours, minutes, and seconds for Event 3
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // If the countdown is over, display a message for Event 3
-    if (distance < 0) {
-      clearInterval(x3);
-      document.getElementById("demo3").innerHTML = "EXPIRED";
-    }
-  }, 1000);
+  // Display the result in the element with id="demo3"
+  document.getElementById("demo3").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+  // If the countdown is over, display a message for Event 3
+  if (distance < 0) {
+    clearInterval(x3);
+    document.getElementById("demo3").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
 </script>
 
 <footer>

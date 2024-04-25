@@ -34,6 +34,7 @@
             "Tests\\": "tests/"
         }
     },
+
     "scripts": {
         "refresh" : [
             "@php artisan db:wipe",
@@ -71,3 +72,4 @@
     "minimum-stability": "stable",
     "prefer-stable": true
 }
+

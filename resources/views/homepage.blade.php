@@ -570,20 +570,38 @@
   <title>Revel Shoes SSP</title>
 </head>
 <body>
-  <nav>
+<nav>
     <div class="logo">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsBBSIUkSdxKAwUor44B1w7AHjJyCBJGEAb7JpLz2cgA&s" alt="">
-      <span>Revel Shoes</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsBBSIUkSdxKAwUor44B1w7AHjJyCBJGEAb7JpLz2cgA&s" alt="">
+        <span>Revel Shoes</span>
     </div>
     <div class="tabs">
-      <a href="#customize">Customize</a>
-      <a href="{{ route('events') }}">Events</a>
-      <a href="{{ route('shop') }}">Shop</a>
+        <a href="#customize">Customize</a>
+        <a href="{{ route('events') }}">Events</a>
+        <a href="{{ route('shop') }}">Shop</a>
     </div>
     <div class="register-button">
-        <a href="{{ route('register') }}">Register Now</a>
+        @if(auth()->check())
+            @if(auth()->user()->role === \App\Enums\Role::Admin)
+                <a href="{{ route('dashboard') }}">Admin Dashboard</a>
+                <!-- Use a form to logout with POST -->
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            @else
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            @endif
+        @else
+            <a href="{{ route('register') }}">Register Now</a>
+        @endif
     </div>
-  </nav>
+</nav>
+
+
 
     <div class="hero-section">
     <div class="hero-background"></div>
@@ -592,9 +610,15 @@
             <p>Step into the world of customizable shoes and unleash your unique style. Experience the magic of Shoemojo!</p>
             <div class="get-started-button">
             @if (Route::has('register'))
-            <button>
+            @if (auth()->check())
+              <button disabled>
+                Get Started
+              </button>
+            @else
+              <button>
                 <a href="{{ route('login') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Get Started</a>
-            </button>
+              </button>
+            @endif
             @endif
             </div>
         </div>
@@ -821,6 +845,8 @@
     </form>
   </div>
 </div>
+
+</div>
 <div class="footer">
     <div class="footer-content">
       <div class="footer-section">
@@ -849,6 +875,17 @@
   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Display the pop-up message
+        alert("Message received. Thank you for your feedback!");
+
+        // Clear the form fields
+        document.getElementById("contact-form").reset();
+      });
+    </script>
 
 
 </body>

@@ -16,6 +16,9 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    <x-nav-link href="{{ route('event.tickets') }}" :active="request()->routeIs('event.tickets')">
+                        {{ __('Event Tickets') }}
+                    </x-nav-link>
 
                 </div>
                 <div>

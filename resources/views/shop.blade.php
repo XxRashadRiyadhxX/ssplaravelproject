@@ -485,7 +485,7 @@
 
     <section style="background-image: url(https://static.dezeen.com/uploads/2014/06/Sneakerboy-by-March-Studio_dezeen_468_7.jpg); background-size: cover; background-position: center 75%; height: 400px; filter: brightness(80%); opacity: 0.7; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 150px;">
     <div class="event-title-container">
-        <h1 class="event-title">The Shoe Store</h1>
+        <h1 class="event-title">Best Sellers</h1>
     </div>
     </section>
 
