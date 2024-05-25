@@ -64,6 +64,7 @@
 
     .logo img {
       height: 60px;
+      width: 65px;
       margin-right: 10px;
       border-radius: 70%;
     }
@@ -312,8 +313,9 @@
 
     .gallery-heading {
     font-size: 2em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: white; /* Text color for the gallery heading */
+    margin-bottom: 20px;
     }
 
     .gallery-images {
@@ -323,8 +325,8 @@
 
     .gallery-image {
     position: relative;
-    width: 250px; /* Adjust the width as needed */
-    height: 250px; /* Adjust the height as needed */
+    width: 320px; /* Adjust the width as needed */
+    height: 220px; /* Adjust the height as needed */
     overflow: hidden;
     }
 
@@ -572,11 +574,11 @@
 <body>
 <nav>
     <div class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsBBSIUkSdxKAwUor44B1w7AHjJyCBJGEAb7JpLz2cgA&s" alt="">
-        <span>Revel Shoes</span>
+        <img src="https://w0.peakpx.com/wallpaper/728/639/HD-wallpaper-jordan-1-black-francisco-jordan-fashion-hypebeast-nike-offwhite-red-shoes-sneakers-stockx-supreme.jpg" alt="">
+        <span>Revel Designs</span>
     </div>
     <div class="tabs">
-        <a href="#customize">Customize</a>
+        <a href="{{ route('customize-shoe') }}">Customize</a>
         <a href="{{ route('events') }}">Events</a>
         <a href="{{ route('shop') }}">Shop</a>
     </div>
@@ -606,7 +608,7 @@
     <div class="hero-section">
     <div class="hero-background"></div>
     <div class="hero-content">
-            <h1>Shoe Magic</h1>
+            <h1>Revel Designs</h1>
             <p>Step into the world of customizable shoes and unleash your unique style. Experience the magic of Shoemojo!</p>
             <div class="get-started-button">
             @if (Route::has('register'))
@@ -693,7 +695,7 @@
   </div>
 </div>
 
-<div class="review-section">
+<!-- <div class="review-section">
   <div class="review-content">
     <p>"I absolutely love Revel Shoes! The customization options are amazing, and the quality is top-notch. It's a perfect blend of style and comfort. Highly recommended!"</p>
   </div>
@@ -701,7 +703,7 @@
     <img src="https://preview.redd.it/the-best-poses-for-girls-profile-pictures-v0-k3kxvh4czthb1.jpg?width=911&format=pjpg&auto=webp&s=5928c38dc54f0dbe37fc68519b2f23f2507e6d15" alt="Customer Photo" class="author-photo">
     <p class="author-name">Hailey Reinhart</p>
   </div>
-</div>
+</div> -->
 
 <div class="gallery-section">
     <div class="gallery-heading">
@@ -710,16 +712,16 @@
     <div class="gallery-images">
       <!-- Add your 4 gallery images here with the .gallery-image class -->
       <div class="gallery-image">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/69f7ae38715339.576bfc0e2df80.jpg" alt="Shoe 1">
+        <img src="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTEwNSx3XzE5NjUseF8yMCx5XzUxNA==/xfdgz9uaguocb9bn81eu/air-jordan-4-iv-retro-what-the-ci1184-146-pair.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" alt="Shoe 1">
       </div>
       <div class="gallery-image">
-        <img src="https://images.unsplash.com/photo-1562183241-b937e95585b6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vdHdlYXJ8ZW58MHx8MHx8fDA%3D" alt="Shoe 2">
+        <img src="https://png.pngtree.com/thumb_back/fh260/background/20230525/pngtree-nike-glow-shoe-by-tzahras-ali-image_2630630.jpg" alt="Shoe 2">
       </div>
       <div class="gallery-image">
-        <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNob2VzfGVufDB8fDB8fHwy&w=1000&q=80" alt="Shoe 3">
+        <img src="https://livedoor.blogimg.jp/kicks_and_roll/imgs/6/5/650237ea.jpg" alt="Shoe 3">
       </div>
       <div class="gallery-image">
-        <img src="https://squaremountain.co.uk/wp-content/uploads/2016/08/product-photography-lighting-nike-shoe-scaled.jpg" alt="Shoe 4">
+        <img src="https://media.architecturaldigest.com/photos/57a11cbeb6c434ab487bc26b/master/pass/nikes-senior-designer-explains-what-went-into-new-air-jordan-01.png" alt="Shoe 4">
       </div>
     </div>
   </div>

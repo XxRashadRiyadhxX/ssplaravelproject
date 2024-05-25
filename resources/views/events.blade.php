@@ -305,10 +305,10 @@
 <nav>
   <div class="logo">
     <img src="https://w0.peakpx.com/wallpaper/728/639/HD-wallpaper-jordan-1-black-francisco-jordan-fashion-hypebeast-nike-offwhite-red-shoes-sneakers-stockx-supreme.jpg" alt="">
-    <span>Revel Shoes</span>
+    <span>Revel Designs</span>
   </div>
   <div class="tabs">
-    <a href="#customize">Customize</a>
+    <a href="{{ route('customize-shoe') }}">Customize</a>
     <a href="{{ route('events') }}">Events</a>
     <a href="{{ route('shop') }}">Shop</a>
   </div>

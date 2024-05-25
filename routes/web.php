@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ShoeOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
 use App\Enums\Role;
@@ -76,6 +76,17 @@ Route::get('/event/tickets', [TicketController::class, 'showEventTickets'])->nam
 
 Route::delete('/ticket/{id}', [TicketController::class, 'delete'])->name('ticket.delete');
 
+
+Route::get('/customize-shoe', [ShoeOrderController::class, 'showCustomization'])->name('customize-shoe');
+Route::post('/submit-customization', [ShoeOrderController::class, 'submitCustomization'])->name('submit-customization');
+Route::get('/pre-order', [ShoeOrderController::class, 'showPreOrderForm'])->name('pre-order');
+Route::post('/place-order', [ShoeOrderController::class, 'placeOrder'])->name('place-order');
+
+// Route for admin panel (assuming authentication is set up)
+Route::get('/admin/orders', [ShoeOrderController::class, 'listOrders'])->name('admin.orders');
+
+Route::get('/admin/orders/{id}', [ShoeOrderController::class, 'viewOrder'])->name('order.view');
+Route::delete('/admin/orders/{id}', [ShoeOrderController::class, 'deleteOrder'])->name('order.delete');
 
 
 

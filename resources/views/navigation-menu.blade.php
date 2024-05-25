@@ -16,8 +16,16 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    <x-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('home')">
+                        {{ __('Visit Website') }}
+                    </x-nav-link>
+
                     <x-nav-link href="{{ route('event.tickets') }}" :active="request()->routeIs('event.tickets')">
                         {{ __('Event Tickets') }}
+                    </x-nav-link>
+
+                    <x-nav-link href="{{ route('admin.orders') }}" :active="request()->routeIs('admin.orders')">
+                        {{ __('Orders') }}
                     </x-nav-link>
 
                 </div>
