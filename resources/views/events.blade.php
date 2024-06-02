@@ -310,7 +310,7 @@
   <div class="tabs">
     <a href="{{ route('customize-shoe') }}">Customize</a>
     <a href="{{ route('events') }}">Events</a>
-    <a href="{{ route('shop') }}">Shop</a>
+    <a href="{{ route('shop.index') }}">Shop</a>
   </div>
   <div class="register-button">
     <a href="{{ route('homepage') }}">Home</a>
@@ -322,7 +322,7 @@
   <div class="overlay"></div>
   <div class="content">
     <h1>Name of the Event 1</h1>
-    <p class="event-time">Event Date: April 15, 2024 | Time: 8:00 PM</p>
+    <p class="event-time">Event Date: June 15, 2024 | Time: 8:00 PM</p>
     <div class="buttons">
       <a href="{{ route('event1.tickets') }}" class="btn">Get Tickets</a> <!-- Updated route link -->
       <a href="https://youtu.be/ZqR_8uqDZ-E" class="btn">Watch Video</a>
@@ -339,7 +339,7 @@
   <div class="overlay"></div>
   <div class="content">
     <h1>Name of the Event 2</h1>
-    <p class="event-time">Event Date: April 20, 2024 | Time: 7:00 PM</p>
+    <p class="event-time">Event Date: June 20, 2024 | Time: 7:00 PM</p>
     <div class="buttons">
       <a href="{{ route('event2.tickets') }}" class="btn">Get Tickets</a> <!-- Updated route link -->
       <a href="https://youtu.be/sjrcO6FWzdE" class="btn">Watch Video</a>
@@ -356,7 +356,7 @@
   <div class="overlay"></div>
   <div class="content">
     <h1>Name of the Event 3</h1>
-    <p class="event-time">Event Date: April 25, 2024 | Time: 6:00 PM</p>
+    <p class="event-time">Event Date: June 25, 2024 | Time: 6:00 PM</p>
     <div class="buttons">
       <a href="{{ route('event3.tickets') }}" class="btn">Get Tickets</a> <!-- Updated route link -->
       <a href="https://youtu.be/Dd_kE1146Ug" class="btn">Watch Video</a>
@@ -371,7 +371,7 @@
 
 <script>
   // Set the date we're counting down to for Event 1
-  var countDownDate1 = new Date("April 15, 2024 20:00:00").getTime();
+  var countDownDate1 = new Date("May 15, 2024 20:00:00").getTime();
 
   // Update the countdown for Event 1 every 1 second
   var x1 = setInterval(function() {
@@ -403,7 +403,7 @@
   }, 1000);
 
   // Set the date we're counting down to for Event 2
-var countDownDate2 = new Date("April 20, 2024 19:00:00").getTime();
+var countDownDate2 = new Date("May 20, 2024 19:00:00").getTime();
 
 // Update the countdown for Event 2 every 1 second
 var x2 = setInterval(function() {
@@ -435,7 +435,7 @@ var x2 = setInterval(function() {
 }, 1000);
 
   // Set the date we're counting down to for Event 3
-var countDownDate3 = new Date("April 25, 2024 18:00:00").getTime();
+var countDownDate3 = new Date("May 25, 2024 18:00:00").getTime();
 
 // Update the countdown for Event 3 every 1 second
 var x3 = setInterval(function() {

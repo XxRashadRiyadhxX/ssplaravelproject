@@ -223,7 +223,7 @@
         <div class="tabs">
             <a href="{{ route('customize-shoe') }}">Customize</a>
             <a href="{{ route('events') }}">Events</a>
-            <a href="{{ route('shop') }}">Shop</a>
+            <a href="{{ route('shop.index') }}">Shop</a>
         </div>
         <div class="register-button">
             <a href="{{ route('homepage') }}">Home</a>

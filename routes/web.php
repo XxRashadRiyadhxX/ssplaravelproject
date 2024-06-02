@@ -1,10 +1,16 @@
 <?php
 
+use App\Enums\Role;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ShoeOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
-use App\Enums\Role;
-use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ShopProductController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PayPalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +52,8 @@ Route::middleware([
 
 Route::post('/logout', function () {
     Auth::logout();
+    // Call the clear cart function
+    app(CartController::class)->clearCart(new \Illuminate\Http\Request());
     return redirect()->route('homepage'); // Redirect after logout
 })->name('logout');
 
@@ -88,5 +96,28 @@ Route::get('/admin/orders', [ShoeOrderController::class, 'listOrders'])->name('a
 Route::get('/admin/orders/{id}', [ShoeOrderController::class, 'viewOrder'])->name('order.view');
 Route::delete('/admin/orders/{id}', [ShoeOrderController::class, 'deleteOrder'])->name('order.delete');
 
+// Shop and Cart
+Route::get('/shop', [ShopProductController::class, 'index'])->name('shop.index');
+
+
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.index');
+Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
+Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
+Route::get('/cart/item-count', [CartController::class, 'getItemCount']);
+
+Route::get('/checkout', [PaymentController::class, 'showCheckoutForm'])->name('checkout.form');
+Route::post('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
+
+Route::post('/paypal/create-payment', [PayPalController::class, 'createPayment'])->name('paypal.create-payment');
+Route::get('/paypal/execute-payment', [PayPalController::class, 'executePayment'])->name('paypal.execute-payment');
+Route::get('/paypal/cancel-payment', [PayPalController::class, 'cancelPayment'])->name('paypal.cancel-payment');
+
+
+Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+
+Route::get('/checkout/process', [PaymentController::class, 'processCheckout'])->name('checkout.process');
+Route::get('/ongoing-orders', [OrderController::class, 'showOngoingOrders'])->name('ongoing-orders');
 
 

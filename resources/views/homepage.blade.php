@@ -18,7 +18,7 @@
         justify-content: center;
         min-height: 100vh; /* Change to min-height */
         background: rgb(0,0,0);
-        background: linear-gradient(90deg, rgba(0,0,0,1) 4%, rgba(113,0,0,1) 35%, rgba(160,0,0,1) 50%, rgba(113,0,0,1) 65%, rgba(0,0,0,1) 96%);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(226,226,226,1) 30%, rgba(255,255,255,1) 50%, rgba(226,226,226,1) 70%, rgba(0,0,0,1) 90%);
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
@@ -171,7 +171,7 @@
         align-items: center;
         justify-content: space-around;
         background: rgb(0,0,0);
-        background: linear-gradient(90deg, rgba(0,0,0,1) 4%, rgba(113,0,0,1) 35%, rgba(160,0,0,1) 50%, rgba(113,0,0,1) 65%, rgba(0,0,0,1) 96%);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(226,226,226,1) 30%, rgba(255,255,255,1) 50%, rgba(226,226,226,1) 70%, rgba(0,0,0,1) 95%);
         padding: 60px; /* Adjust the padding as needed */
         box-sizing: border-box; /* Include padding in total width */
     }
@@ -195,21 +195,23 @@
     .story-content h2 {
     font-size: 4em;
     margin-bottom: 20px;
-    color: white; /* Text color for the heading */
+    color: red; /* Text color for the heading */
     }
 
     .story-content p {
     font-size: 1.3em;
     margin-bottom: 20px;
-    color: white; /* Text color for the paragraphs */
+    color: black; /* Text color for the paragraphs */
     }
 
     .events-section {
+    gap: 80px;
+    width: 1530px;
     display: flex;
     justify-content: space-between;
-    background-color: black; /* Change the background color to black */
     padding: 60px; /* Adjust the padding as needed */
     box-sizing: border-box; /* Include padding in total width */
+    background-color: #818181;
     }
 
     .event-item {
@@ -304,8 +306,9 @@
     }
 
     .gallery-section {  
+      width: 1530px;
     background: rgb(132,132,132);
-    background: linear-gradient(0deg, rgba(132,132,132,1) 0%, rgba(0,0,0,1) 83%);
+    background: linear-gradient(0deg, rgba(170,47,47,1) 5%, rgba(110,0,0,1) 20%, rgba(163,0,0,1) 50%, rgba(110,0,0,1) 80%, rgba(0,0,0,1) 95%);;
     padding: 60px; /* Adjust the padding as needed */
     box-sizing: border-box; /* Include padding in total width */
     text-align: center;
@@ -343,166 +346,250 @@
     }
 
     .featured-collections {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(132,132,132,1) 83%);
-    margin-top: 0px;
-    text-align: center;
-    padding: 60px; /* Add padding for better spacing */
-    }
-
-    .collection-heading {
-        font-size: 3em;
-        margin-bottom: 20px;
-        color: white; /* Text color for the collection heading */
-        font-weight: bold; /* Bold font */
-    }
-
-    .collection-images {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .shoe {
-        width: 350px; /* Adjusted width for better alignment */
-        margin: 20px;
-        position: relative; /* Position relative for button positioning */
-        text-align: center; /* Center text within the shoe */
-    }
-
-    .shoe img {
-        width: 100%;
-        height: 350px; /* Increase the image height */
-        border-radius: 10px;
-        margin-bottom: 10px;
-        transition: filter 0.3s; /* Add transition for smooth effect on hover */
-    }
-
-    .shoe img:hover {
-        filter: grayscale(0%); /* Show original color on hover */
-    }
-
-    .shoe-info {
-        text-align: center; /* Center text within the shoe */
-    }
-
-    .shoe-name {
-        font-size: 1.5em;
-        margin-bottom: 5px;
-        color: white; /* Text color for the shoe name */
-    }
-
-    .shoe-price {
-        font-size: 1.2em;
-        margin-bottom: 5px;
-        color: #FFD700; /* Yellow color for the price */
-    }
-
-    .shoe-description {
-        font-size: 1em;
-        color: white; /* Text color for the description */
-        margin-bottom: 20px;
-    }
-
-    .get-yours-button {
-      margin-top: 20px;
-      background-color: transparent;
-      color: white;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: 2px solid white;
-      border-radius: 50px; /* Oval shape */
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s; /* Add transition effect for color change */
-    }
-
-    .get-yours-button:hover {
-        background-color: #FFD700; /* Yellow color on hover */
-        color: black;
-    }
-
-    .faq-section {
-      background: black;
-      padding: 60px;
       text-align: center;
-      width:100%;
-    }
+      padding: 50px 20px;
+      background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1100px;
+      margin: 50px auto;
+      border-radius: 10px;
+      background: rgb(29,29,29);
+      background: linear-gradient(0deg, rgba(149,149,149,1) 5%, rgba(226,226,226,1) 15%, rgba(255,255,255,1) 50%, rgba(221,221,221,1) 85%, rgba(149,149,149,1) 95%);
+  }
 
-    .faq-heading {
+  .collection-heading {
       font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #FFD700; /* Text color for the FAQ heading */
-    }
+      margin-bottom: 30px;
+      color: #333;
+      animation: fadeIn 1s ease-in-out;
+  }
 
-    .faq-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width:100%;
-    }
-
-    .faq-item {
-      width: 70%; /* Adjusted width for better readability */
-      margin-bottom: 20px;
-    }
-
-    .question {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #848484; /* Text color for the question */
-    }
-
-    .answer {
-      font-size: 1em;
-      color: whitesmoke; /* Text color for the answer */
-    }
-
-    .contact-section {
-      padding: 60px;
-      text-align: center;
-      width:100%;
-      background: linear-gradient(90deg, rgba(0,0,0,1) 4%, rgba(113,0,0,1) 35%, rgba(160,0,0,1) 50%, rgba(113,0,0,1) 65%, rgba(0,0,0,1) 96%);
-    }
-
-    .contact-heading {
-      font-size: 3em;
-      margin-bottom: 20px;
-      color: black; /* Text color for the contact heading */
-      font-weight: bold; /* Bold font */
-    }
-
-    .contact-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    form {
-      width: 70%;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    label {
-      display: block;
-      margin: 10px 0;
-      color: black; /* Text color for labels */
-      font-size: 1.0em; /* Larger font size */
-      font-weight: bold; /* Bold font */
-      letter-spacing: 1px; /* Adjust letter spacing for style */
-      text-transform: uppercase; /* Convert text to uppercase */
-    }
-
-    input,
-    textarea {
+  .carousel {
+      position: relative;
       width: 100%;
-      padding: 10px;
-      margin: 5px 0 20px;
+      overflow: hidden;
+      border-radius: 10px;
+  }
+
+  .carousel-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+      display: flex;
+  }
+
+  .shoe {
+      min-width: 100%;
       box-sizing: border-box;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+  }
+
+  .shoe img {
+      max-width: 100%;
+      width: 700px;
+      height: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+  }
+
+  .shoe img:hover {
+      transform: scale(1.05);
+  }
+
+  .shoe-info {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .shoe-name {
+      font-size: 1.8em;
+      margin: 10px 0;
+      color: #333;
+  }
+
+  .shoe-price {
+      font-size: 1.4em;
+      color: #777;
+      margin: 10px 0;
+  }
+
+  .shoe-description {
+      margin: 10px 0;
+      color: #555;
+  }
+
+  .get-yours-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #FFD700;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .get-yours-button:hover {
+      background-color: #ffa000;
+      transform: scale(1.1);
+  }
+
+  .carousel-arrow {
+      position: absolute;
+      top: 38%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 20px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 2em;
+      animation: bounce 2s infinite;
+  }
+
+  .carousel-arrow:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+      transform: scale(1.2);
+  }
+
+  .left-arrow {
+      left: 75px;
+  }
+
+  .right-arrow {
+      right: 75px;
+  }
+
+  /* Keyframe animations */
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+  }
+
+  @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+          transform: translateY(-50%);
+      }
+      40% {
+          transform: translateY(-55%);
+      }
+      60% {
+          transform: translateY(-50%);
+      }
+  }
+
+  .combined-section {
+    background-color: #333;
+    padding: 50px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1530px; /* Adjusted max-width */
+    margin: 0px auto;
+    border-radius: 10px;
+  }
+
+  .faq-contact-heading {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #f5f5f5;
+      text-align: center;
+  }
+
+  .faq-contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .faq-section, .contact-section {
+      flex-basis: calc(50% - 20px); /* Adjusted flex-basis */
+      margin-bottom: 20px;
+  }
+
+  .faq-heading, .contact-heading {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #f5f5f5;
+      text-align: center;
+  }
+
+  .faq-content, .contact-content {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item {
+      margin-bottom: 20px;
+  }
+
+  .question {
+      font-weight: bold;
+      color: #555;
+  }
+
+  .answer {
+      color: #777;
+  }
+
+  #contact-form {
+      display: flex;
+      flex-direction: column;
+  }
+
+  #contact-form label {
+      margin: 10px 0 5px;
+      color: #555;
+  }
+
+  #contact-form input, #contact-form textarea {
+      padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-    }
+  }
+
+  .send-message-button {
+      padding: 12px 24px;
+      background-color: #f0c14b;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  .send-message-button:hover {
+      background-color: #e5b12d;
+  }
+
+
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+  }
+
 
     .send-message-button {
       background-color: #FFD700; /* Yellow background */
@@ -578,9 +665,15 @@
         <span>Revel Designs</span>
     </div>
     <div class="tabs">
-        <a href="{{ route('customize-shoe') }}">Customize</a>
-        <a href="{{ route('events') }}">Events</a>
-        <a href="{{ route('shop') }}">Shop</a>
+    @if(auth()->check())
+            <a href="{{ route('customize-shoe') }}">Customize</a>
+            <a href="{{ route('events') }}">Events</a>
+            <a href="{{ route('shop.index') }}">Shop</a>
+        @else
+            <a href="{{ route('login') }}">Login to Customize</a>
+            <a href="{{ route('login') }}">Login to Events</a>
+            <a href="{{ route('login') }}">Login to Shop</a>
+        @endif
     </div>
     <div class="register-button">
         @if(auth()->check())
@@ -648,25 +741,36 @@
   <div class="event-item">
     <img src="https://www.catseven77.com/cdn/shop/files/S1f4ea6605fcf4c4f9ea76846ea28bef00.jpg?v=1702501329&width=416" alt="Sneaker Release">
     <div class="event-details">
-      <h3>Sneaker Release Party</h3>
+      <h3>Sneaker Release Party 2024</h3>
       <p>March 5, 2024</p>
       <p>Celebrate the launch of our latest sneaker collections with an event filled with music, food, and fun.</p>
-      <a href="{{ route('events') }}">
-        <button class="join-button">View More Details</button>
-      </a>
-
+      @if(auth()->check())
+                <a href="{{ route('events') }}">
+                    <button class="join-button">View More Details</button>
+                </a>
+            @else
+                <a href="{{ route('login') }}">
+                    <button class="join-button">Login to View</button>
+                </a>
+            @endif
     </div>
   </div>
 
   <div class="event-item">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRamQ9KYqgOU-U5_Nkl6gK5soaRDAZjHRoVpClEd2nTM7Bu5mxMw_EmsRusrGci0jz0TWg&usqp=CAU" alt="Shoe Design Workshop">
     <div class="event-details">
-      <h3>Shoe Design Workshop</h3>
+      <h3>Annual Shoe Design Workshop</h3>
       <p>January 15, 2024</p>
       <p>Join us for an interactive workshop and learn the art of shoe customization.</p>
-      <a href="{{ route('events') }}">
-        <button class="join-button">View More Details</button>
-      </a>
+      @if(auth()->check())
+                <a href="{{ route('events') }}">
+                    <button class="join-button">View More Details</button>
+                </a>
+            @else
+                <a href="{{ route('login') }}">
+                    <button class="join-button">Login to View</button>
+                </a>
+            @endif
     </div>
   </div>
 
@@ -676,9 +780,15 @@
       <h3>Fashion Show Extravaganza</h3>
       <p>February 10, 2024</p>
       <p>Witness the magic of custom shoes on the runway. Be prepared to be amazed!</p>
-      <a href="{{ route('events') }}">
-        <button class="join-button">View More Details</button>
-      </a>
+        @if(auth()->check())
+                    <a href="{{ route('events') }}">
+                        <button class="join-button">View More Details</button>
+                    </a>
+                @else
+                    <a href="{{ route('login') }}">
+                        <button class="join-button">Login to View</button>
+                    </a>
+        @endif
     </div>
   </div>
 
@@ -688,9 +798,15 @@
       <h3>Sneaker Exchange Social</h3>
       <p>April 20, 2024</p>
       <p>Connect with fellow shoe enthusiasts and swap your unique creations.</p>
-      <a href="{{ route('events') }}">
-        <button class="join-button">View More Details</button>
-      </a>
+      @if(auth()->check())
+                <a href="{{ route('events') }}">
+                    <button class="join-button">View More Details</button>
+                </a>
+            @else
+                <a href="{{ route('login') }}">
+                    <button class="join-button">Login to View</button>
+                </a>
+        @endif
     </div>
   </div>
 </div>
@@ -727,126 +843,181 @@
   </div>
 
   <div class="featured-collections">
-  <div class="collection-heading">
-    Featured Collections
-  </div>
-  <div class="collection-images">
-    <!-- Shoe 1 -->
-    <div class="shoe">
-      <img src="https://img.freepik.com/free-photo/pair-brown-shoes-with-black-leather-sole-word-bottom_123827-23446.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703289600&semt=ais" alt="Collection 1">
-      <div class="shoe-info">
-        <div class="shoe-name">Old and Gold</div>
-        <div class="shoe-price">$150</div>
-        <div class="shoe-description">Timeless and effortlessly stylish, blending classic aesthetics with contemporary allure.</div>
-        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
-      </div>
+        <div class="collection-heading">
+            Featured Collections
+        </div>
+        <div class="carousel">
+            <button class="carousel-arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <!-- Shoe 1 -->
+                    <div class="shoe">
+                        <img src="https://www.desktopbackground.org/p/2010/11/21/114294_top-nike-shoes-wallpapers-hd-images-for-pinterest_930x620_h.jpg" alt="Collection 1">
+                        <div class="shoe-info">
+                            <div class="shoe-name">Old and Gold</div>
+                            <div class="shoe-price">$150</div>
+                            <div class="shoe-description">Timeless and effortlessly stylish, blending classic aesthetics with contemporary allure.</div>
+                            @if(auth()->check())
+                                    <a href="{{ route('shop.index') }}">
+                                        <button class="get-yours-button">Get Yours</button>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <button class="join-button">Login to View</button>
+                                    </a>
+                            @endif
+                        </div>
+                    </div>
+                    <!-- Repeat for other shoes -->
+                    <!-- Shoe 2 -->
+                    <div class="shoe">
+                        <img src="https://img.freepik.com/premium-photo/origami-futuristic-adidas-shoes-with-dark-blue-background-text-adidas_510958-1434.jpg" alt="Collection 2">
+                        <div class="shoe-info">
+                            <div class="shoe-name">Sport Mode</div>
+                            <div class="shoe-price">$120</div>
+                            <div class="shoe-description">Tailored to be the perfect choice for sports enthusiasts and active lifestyles.</div>
+                            @if(auth()->check())
+                                    <a href="{{ route('shop.index') }}">
+                                        <button class="get-yours-button">Get Yours</button>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <button class="join-button">Login to View</button>
+                                    </a>
+                            @endif
+                        </div>
+                    </div>
+                    <!-- Shoe 3 -->
+                    <div class="shoe">
+                        <img src="https://png.pngtree.com/thumb_back/fh260/background/20230518/pngtree-air-jordans-shoes-come-in-red-and-black-image_2583329.jpg" alt="Collection 3">
+                        <div class="shoe-info">
+                            <div class="shoe-name">Broken Amethyst</div>
+                            <div class="shoe-price">$199</div>
+                            <div class="shoe-description">Embark on a transformative journey with a captivating design for an entirely fresh look.</div>
+                            @if(auth()->check())
+                                    <a href="{{ route('shop.index') }}">
+                                        <button class="get-yours-button">Get Yours</button>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <button class="join-button">Login to View</button>
+                                    </a>
+                            @endif
+                        </div>
+                    </div>
+                    <!-- Shoe 4 -->
+                    <div class="shoe">
+                        <img src="https://images.squarespace-cdn.com/content/v1/53a2b3a1e4b0a5020bebe676/1475654193100-3P0KPI6P5T2AZCGARTSN/shoe-footwear-product-photography-london-adidas-ultra-boost-21.jpg?format=2500w" alt="Collection 4">
+                        <div class="shoe-info">
+                            <div class="shoe-name">A73 Comfys</div>
+                            <div class="shoe-price">$230</div>
+                            <div class="shoe-description">Experience unparalleled comfort as you immerse yourself in the plush embrace of these shoes.</div>
+                            @if(auth()->check())
+                                    <a href="{{ route('shop.index') }}">
+                                        <button class="get-yours-button">Get Yours</button>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <button class="join-button">Login to View</button>
+                                    </a>
+                            @endif
+                        </div>
+                    </div>
+                    <!-- Shoe 5 -->
+                    <div class="shoe">
+                        <img src="https://i.pinimg.com/736x/a5/cb/9a/a5cb9ad36bec07d58ad558bd01b2441b.jpg" alt="Collection 5">
+                        <div class="shoe-info">
+                            <div class="shoe-name">Converse Ruby Red</div>
+                            <div class="shoe-price">$249</div>
+                            <div class="shoe-description">Unleash your confidence with a pair that exudes a daring and stylish demeanor.</div>
+                            @if(auth()->check())
+                                    <a href="{{ route('shop.index') }}">
+                                        <button class="get-yours-button">Get Yours</button>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <button class="join-button">Login to View</button>
+                                    </a>
+                            @endif
+                        </div>
+                    </div>
+                    <!-- Shoe 6 -->
+                    <div class="shoe">
+                        <img src="https://img.buzzfeed.com/buzzfeed-static/static/2023-06/5/19/tmp/2e8e2d92f6c5/tmp-name-3-1206-1685991950-8_dblbig.jpg?resize=1200:*" alt="Collection 6">
+                        <div class="shoe-info">
+                            <div class="shoe-name">Pirate Treasure</div>
+                            <div class="shoe-price">$300</div>
+                            <div class="shoe-description">Elevate your everyday style with a nonchalant display of casual sophistication and flair.</div>
+                            @if(auth()->check())
+                                    <a href="{{ route('shop.index') }}">
+                                        <button class="get-yours-button">Get Yours</button>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}">
+                                        <button class="join-button">Login to View</button>
+                                    </a>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+        </div>
     </div>
 
-    <!-- Repeat the structure for the remaining shoes -->
-    <!-- Shoe 2 -->
-    <div class="shoe">
-      <img src="https://rukminim2.flixcart.com/image/450/500/l3dcl8w0/shoe/d/s/m/8-ga1118-8-adidas-cblack-stone-actgol-original-imagegegzhhgzhk3.jpeg?q=90&crop=false" alt="Collection 2">
-      <div class="shoe-info">
-        <div class="shoe-name">Sport Mode</div>
-        <div class="shoe-price">$120</div>
-        <div class="shoe-description">Tailored to be the perfect choice for sports enthusiasts and active lifestyles.</div>
-        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
-      </div>
+<!-- Combined FAQ and Contact Section -->
+<div class="combined-section">
+        <div class="faq-contact-heading">FAQs & Contact Us</div>
+        
+        <div class="faq-contact-container">
+        <div class="faq-section">
+        <div class="faq-heading">Frequently Asked Questions</div>
+        <div class="faq-content">
+            <div class="faq-item">
+                <div class="question">Q: How can I customize my shoes?</div>
+                <div class="answer">A: Visit our Customize page and follow the easy steps to design your unique pair. Select the primary color, size and secondary color and test your amazing skills!</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: How long does customization take?</div>
+                <div class="answer">A: Customization time varies based on design complexity, but we strive to deliver within 4-6 weeks. We also offer a 30-day return policy.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: Do you ship internationally?</div>
+                <div class="answer">A: Yes, we ship our custom creations worldwide to bring Shoemojo magic to every corner of the globe.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: Can I track my order?</div>
+                <div class="answer">A: Yes, once your order is shipped, you will receive a tracking number via email to monitor the delivery status.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: What payment methods do you accept?</div>
+                <div class="answer">A: We accept all major credit cards, PayPal, and Apple Pay. Please refer to our Payment Options page for more details.</div>
+            </div>
+        </div>
+            </div>
+
+            <div class="contact-section">
+                <div class="contact-heading">Get in Touch</div>
+                <div class="contact-content">
+                    <form id="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+        
+                        <button type="submit" class="send-message-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Shoe 3 -->
-    <div class="shoe">
-      <img src="https://i.pinimg.com/236x/06/e2/e7/06e2e7ed9e287b9cde2908255a48ef68.jpg" alt="Collection 3">
-      <div class="shoe-info">
-        <div class="shoe-name">Broken Amethyst</div>
-        <div class="shoe-price">$199</div>
-        <div class="shoe-description">Embark on a transformative journey with a captivating design for an entirely fresh look.</div>
-        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
-      </div>
-    </div>
-
-    <!-- Shoe 4 -->
-    <div class="shoe">
-      <img src="https://images.squarespace-cdn.com/content/v1/53a2b3a1e4b0a5020bebe676/1475654193100-3P0KPI6P5T2AZCGARTSN/shoe-footwear-product-photography-london-adidas-ultra-boost-21.jpg?format=2500w" alt="Collection 4">
-      <div class="shoe-info">
-        <div class="shoe-name">A73 Comfys</div>
-        <div class="shoe-price">$230</div>
-        <div class="shoe-description">Experience unparalleled comfort as you immerse yourself in the plush embrace of these shoes.</div>
-        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
-      </div>
-    </div>
-
-    <!-- Shoe 5 -->
-    <div class="shoe">
-      <img src="https://images.journeys.com/images/products/1_5160_FS_ALT1C.JPG" alt="Collection 5">
-      <div class="shoe-info">
-        <div class="shoe-name">Converse Ruby Red</div>
-        <div class="shoe-price">$249</div>
-        <div class="shoe-description">Unleash your confidence with a pair that exudes a daring and stylish demeanor.</div>
-        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
-      </div>
-    </div>
-
-    <!-- Shoe 6 -->
-    <div class="shoe">
-      <img src="https://schiffgold.com/wp-content/uploads/2018/09/gold-nike2.png" alt="Collection 6">
-      <div class="shoe-info">
-        <div class="shoe-name">Pirate Treasure</div>
-        <div class="shoe-price">$300</div>
-        <div class="shoe-description">Elevate your everyday style with a nonchalant display of casual sophistication and flair.</div>
-        <a class="get-yours-button" href="{{ route('shop') }}">Get Yours</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="faq-section">
-  <div class="faq-heading">
-    Frequently Asked Questions
-  </div>
-  <div class="faq-content">
-    <div class="faq-item">
-      <div class="question">Q: How can I customize my shoes?</div>
-      <div class="answer">A: Visit our Customize page and follow the easy steps to design your unique pair.</div>
-    </div>
-    <div class="faq-item">
-      <div class="question">Q: What is the return policy?</div>
-      <div class="answer">A: We offer a 30-day return policy. Check our Returns & Exchanges page for details.</div>
-    </div>
-    <div class="faq-item">
-      <div class="question">Q: How long does customization take?</div>
-      <div class="answer">A: Customization time varies based on design complexity, but we strive to deliver within 4-6 weeks.</div>
-    </div>
-    <div class="faq-item">
-      <div class="question">Q: Do you ship internationally?</div>
-      <div class="answer">A: Yes, we ship our custom creations worldwide to bring Shoemojo magic to every corner of the globe.</div>
-    </div>
-    <!-- Add more FAQ items as needed -->
-  </div>
-</div>
-
-<div class="contact-section">
-  <div class="contact-heading">
-    Get in Touch
-  </div>
-  <div class="contact-content">
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit" class="send-message-button">Send Message</button>
-    </form>
-  </div>
-</div>
 
 </div>
 <div class="footer">
@@ -887,6 +1058,34 @@
         // Clear the form fields
         document.getElementById("contact-form").reset();
       });
+
+      let currentSlide = 0;
+
+      function showSlide(index) {
+          const slides = document.querySelectorAll('.shoe');
+          const totalSlides = slides.length;
+          if (index >= totalSlides) {
+              currentSlide = 0;
+          } else if (index < 0) {
+              currentSlide = totalSlides - 1;
+          } else {
+              currentSlide = index;
+          }
+          const carouselContainer = document.querySelector('.carousel-container');
+          carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+
+      function nextSlide() {
+          showSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+          showSlide(currentSlide - 1);
+      }
+
+      // Initialize the carousel
+      showSlide(currentSlide);
+
     </script>
 
 
