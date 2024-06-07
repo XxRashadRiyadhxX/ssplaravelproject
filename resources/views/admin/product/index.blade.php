@@ -52,6 +52,9 @@
                                         Description</th>
                                     <th scope="col"
                                         class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                        Image</th>
+                                    <th scope="col"
+                                        class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                                         Actions</th>
                                 </tr>
                             </thead>
@@ -68,6 +71,10 @@
                                             class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
                                             {{ $product->Description }}</td>
                                         <td
+                                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            <img src="{{ $product->Image }}"  class="h-16 w-16 object-cover">
+                                        <td
+
                                             class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
                                             <div class="flex gap-3">
                                                 <a href="{{ route('product.edit', $product->id) }}"

@@ -1,4 +1,4 @@
-]<?php 
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -10,10 +10,7 @@ class CreateShopOrdersTable extends Migration
     {
         Schema::create('shop_orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('order_id')->nullable();
-            $table->string('payer_id')->nullable();
-            $table->string('payment_method');
+            $table->unsignedBigInteger('user_id')->nullable(); // To keep track of the user who placed the order
             $table->string('name');
             $table->string('address');
             $table->string('city');
@@ -22,8 +19,10 @@ class CreateShopOrdersTable extends Migration
             $table->string('country');
             $table->string('phone');
             $table->string('email');
-            $table->decimal('total', 10, 2);
-            $table->string('status')->default('pending');
+            $table->string('payment_method');
+            $table->json('cart_items'); // To store the cart items as JSON
+            $table->decimal('total', 8, 2); // To store the total amount
+            $table->string('status')->default('pending'); // To store the status of the order
             $table->timestamps();
         });
     }

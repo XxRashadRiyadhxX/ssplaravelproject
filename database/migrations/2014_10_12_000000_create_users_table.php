@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('role')->default(Role::Admin); // Set the default role to Admin
+            $table->tinyInteger('role')->default(Role::Customer); // Set the default role to Admin
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

@@ -119,5 +119,4 @@ Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 
 Route::get('/checkout/process', [PaymentController::class, 'processCheckout'])->name('checkout.process');
 Route::get('/ongoing-orders', [OrderController::class, 'showOngoingOrders'])->name('ongoing-orders');
-
-
+Route::post('/checkout/fake', 'PaymentController@fakeCheckout')->name('checkout.fake');

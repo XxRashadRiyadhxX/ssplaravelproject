@@ -10,6 +10,10 @@ class ShopOrder extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'order_id', 'payer_id', 'payment_method', 'name', 'address', 'city', 'state', 'zip', 'country', 'phone', 'email', 'total', 'status'
+        'name', 'address', 'city', 'state', 'zip', 'country', 'phone', 'email', 'payment_method', 'cart_items', 'total', 'status', 'user_id'
+    ];
+
+    protected $casts = [
+        'cart_items' => 'array', // Cast cart_items to array
     ];
 }

@@ -92,7 +92,22 @@
                             @enderror
                         </div>
 
-
+                        <div class="col-span-full">
+                            <label for="image" class="block text-sm font-medium leading-6 text-gray-400">
+                                Image
+                            </label>
+                            <div class="mt-2">
+                                <input id="Image" name="Image" type="file"
+                                    class="block w-full rounded-md border-gray-300 py-2 text-gray-700 shadow-sm placeholder-gray-400 focus:ring-2 focus:ring-gray-500 focus:border-transparent sm:text-sm sm:leading-6" />
+                            </div>
+                            <p class="mt-3 text-sm leading-6 text-gray-600">
+                                Image of the product.
+                            </p>
+                            @error('Image')
+                                <p class="mt-3 text-sm leading-6 text-gray-600">
+                                    {{ $message }}
+                                </p>
+                            @enderror
                         </div>
                     </div>
                     <div class="flex items-center justify-end gap-x-6 border-t border-gray-300 px-4 py-4 sm:px-8">

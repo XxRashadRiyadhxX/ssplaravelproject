@@ -522,14 +522,14 @@
         </div>
     </div>
     <div class="container" id="product-container">
-        <div class="product" data-id="1" data-name="Nike Air Force 1" data-color="Red" data-price="29.99" data-stock="100" data-image="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTEyMyx3XzE5OTcseF8zLHlfNDkz/cpke9mglhd9byczcte69/nike-air-force-1-high-vintage-sail-dm0209-100-pair.jpg?output-format=jpg&output-quality=auto" data-category="Nike">
+        <div class="product" data-id="1" data-name="Nike Air Force 1" data-color="Off White" data-price="29.99" data-stock="100" data-image="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTEyMyx3XzE5OTcseF8zLHlfNDkz/cpke9mglhd9byczcte69/nike-air-force-1-high-vintage-sail-dm0209-100-pair.jpg?output-format=jpg&output-quality=auto" data-category="Nike">
             <img src="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTEyMyx3XzE5OTcseF8zLHlfNDkz/cpke9mglhd9byczcte69/nike-air-force-1-high-vintage-sail-dm0209-100-pair.jpg?output-format=jpg&output-quality=auto" alt="Product Image">
             <div class="product-info">
                 <h2>Nike Air Force 1 </h2>
                 <h2>Color : Off White </h2>
                 <p>Description of the product goes here. This can be a brief overview of the product.</p>
                 <p class="price">$29.99</p>
-                <button class="add-to-cart" data-id="1" data-name="Nike Air Force 1" data-color="Red" data-price="29.99" data-stock="100" data-image="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTEyMyx3XzE5OTcseF8zLHlfNDkz/cpke9mglhd9byczcte69/nike-air-force-1-high-vintage-sail-dm0209-100-pair.jpg?output-format=jpg&output-quality=auto">Add to Cart</button>
+                <button class="add-to-cart" data-id="1" data-name="Nike Air Force 1" data-color="Off White" data-price="29.99" data-stock="100" data-image="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTEyMyx3XzE5OTcseF8zLHlfNDkz/cpke9mglhd9byczcte69/nike-air-force-1-high-vintage-sail-dm0209-100-pair.jpg?output-format=jpg&output-quality=auto">Add to Cart</button>
             </div>
         </div>
         <div class="product" data-id="2" data-name="Adidas Sneakers NY Knicks Edition" data-color="White, Blue and Orange" data-price="19.99" data-stock="100" data-image="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F02%2Fadidas-basketball-lifestyle-footwear-preview-info-6.jpg?cbr=1&q=90" data-category="Adidas">
@@ -592,14 +592,14 @@
                 <button class="add-to-cart" data-id="7" data-name="Adidas Harden Stepback Shoe" data-color="Pink" data-price="19.99" data-stock="100" data-image="https://www.manelsanchez.fr/uploads/media/images/adidas-harden-stepback-3-jr-pink-panther-12.jpg">Add to Cart</button>
             </div>
         </div>
-        <div class="product" data-id="8" data-name="Converse G4 Basketball 2023" data-color="Multi-colored" data-price="24.99" data-stock="100" data-image="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fconverse-g4-official-release-date-info-3.jpg?cbr=1&q=90" data-category="Converse">
+        <div class="product" data-id="8" data-name="Converse G4 Basketball 2023" data-color="Multi-colored" data-price="49.99" data-stock="100" data-image="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fconverse-g4-official-release-date-info-3.jpg?cbr=1&q=90" data-category="Converse">
             <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fconverse-g4-official-release-date-info-3.jpg?cbr=1&q=90" alt="Product Image">
             <div class="product-info">
                 <h2>Converse G4 Basketball 2023</h2>
                 <h2>Color : Multi-colored </h2>
                 <p>Description of the product goes here. This can be a brief overview of the product.</p>
-                <p class="price">$24.99</p>
-                <button class="add-to-cart" data-id="8" data-name="Converse G4 Basketball 2023" data-color="Multi-colored" data-price="24.99" data-stock="100" data-image="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fconverse-g4-official-release-date-info-3.jpg?cbr=1&q=90">Add to Cart</button>
+                <p class="price">$49.99</p>
+                <button class="add-to-cart" data-id="8" data-name="Converse G4 Basketball 2023" data-color="Multi-colored" data-price="49.99" data-stock="100" data-image="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fconverse-g4-official-release-date-info-3.jpg?cbr=1&q=90">Add to Cart</button>
             </div>
         </div>
         <div class="product" data-id="9" data-name="Nike Kyrie 7 Special FX" data-color="Turquoise" data-price="34.99" data-stock="100" data-image="https://i.pinimg.com/736x/0b/09/d0/0b09d031aacb39965de9c8a41cd10a6d.jpg" data-category="Nike">

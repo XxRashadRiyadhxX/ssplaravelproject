@@ -159,20 +159,28 @@
                     method: 'POST',
                     data: $(this).serialize() + '&payment_method=card',
                     success: function(response) {
-                        Swal.fire({
-                            title: 'Order Placed!',
-                            text: 'Your order has been successfully placed.',
-                            icon: 'success',
-                            confirmButtonText: 'OK'
-                        }).then(() => {
-                            window.location.href = "{{ route('shop.index') }}";
-                        });
+                        if(response.success) {
+                            Swal.fire({
+                                title: 'Order Placed!',
+                                text: 'Your order has been successfully placed.',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            }).then(() => {
+                                window.location.href = "{{ route('shop.index') }}";
+                            });
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'Payment failed.',
+                                icon: 'error',
+                                confirmButtonText: 'OK'
+                            });
+                        }
                     },
                     error: function(response) {
-                        console.error('Payment failed response:', response);
                         Swal.fire({
                             title: 'Error!',
-                            text: 'Payment failed.',
+                            text: 'Payment failed. Please check your card details and try again.',
                             icon: 'error',
                             confirmButtonText: 'OK'
                         });
@@ -219,10 +227,9 @@
                             });
                         },
                         error: function(response) {
-                            console.error('Payment failed response:', response);
                             Swal.fire({
                                 title: 'Error!',
-                                text: 'Payment failed.',
+                                text: 'Payment failed. Please try again.',
                                 icon: 'error',
                                 confirmButtonText: 'OK'
                             }).then(() => {
@@ -241,10 +248,9 @@
                 });
             },
             onError: function(err) {
-                console.error('Payment error:', err);
                 Swal.fire({
                     title: 'Error!',
-                    text: 'Payment failed.',
+                    text: 'Payment failed. Please try again.',
                     icon: 'error',
                     confirmButtonText: 'OK'
                 });
